@@ -532,20 +532,26 @@
   .pub-group{margin-top:26px}
   .pub-group:first-of-type{margin-top:4px}
   .pub-head{
-    display:flex;
-    align-items:baseline;
+    display:inline-flex;
+    align-items:center;
     gap:10px;
     font-size:15px;
     font-weight:700;
+    line-height:1;
+    min-height:38px;
     margin:0 0 6px;
   }
   .pub-head .pub-count{
+    display:inline-flex;
+    align-items:center;
+    height:24px;
     font-size:12px;
     font-weight:700;
+    line-height:1;
     color:var(--accent-ink);
     background:var(--accent-soft);
     border-radius:999px;
-    padding:2px 10px;
+    padding:0 10px;
   }
   .pub-list{
     list-style:none;
@@ -582,6 +588,76 @@
     color:var(--muted);
     font-variant-numeric:tabular-nums;
     white-space:nowrap;
+  }
+  .pub-badge{
+    display:inline-block;
+    margin-left:8px;
+    padding:0 8px;
+    font-size:11.5px;
+    font-weight:700;
+    line-height:1.6;
+    color:var(--accent-ink);
+    background:var(--accent-soft);
+    border:1px solid var(--accent);
+    border-radius:999px;
+    vertical-align:2px;
+    white-space:nowrap;
+  }
+  .pub-list li.pub-hidden{display:none}
+  .pub-toolbar{
+    position:sticky;
+    top:72px;
+    z-index:9;
+  }
+  .pub-toolbar .subtabs{
+    position:static;
+    margin-top:0;
+  }
+  .pub-group-head{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-height:38px;
+    margin:0 0 6px;
+  }
+  .pub-group-head .pub-head{margin:0}
+  .pub-group-head .pub-filter-btn{margin-left:auto}
+  .pub-filter-btn{
+    flex:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    height:38px;
+    min-height:38px;
+    appearance:none;
+    border:1px solid var(--line);
+    background:var(--surface);
+    color:var(--ink);
+    font:inherit;
+    font-size:13.5px;
+    font-weight:600;
+    line-height:1;
+    padding:0 14px;
+    border-radius:999px;
+    cursor:pointer;
+    white-space:nowrap;
+    box-shadow:var(--shadow);
+  }
+  .pub-filter-btn:hover{border-color:var(--accent); color:var(--accent-ink)}
+  .pub-filter-btn[aria-pressed="true"]{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#fff;
+  }
+  @media (prefers-color-scheme: dark){
+    .pub-filter-btn[aria-pressed="true"]{color:#101411}
+  }
+  .pub-filter-btn:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:2px;
+  }
+  @media (max-width:480px){
+    .pub-filter-btn{font-size:12.5px; padding:0 10px}
   }
 
   /* Tabs */
@@ -818,51 +894,53 @@
       <span class="asof">精选 10 篇</span>
     </div>
 
+    <div class="pub-toolbar">
     <nav class="subtabs" role="tablist" aria-label="已发表分页">
       <button type="button" role="tab" id="subtab-xhs" aria-controls="subpanel-xhs" aria-selected="true">小红书<span class="n">4 篇</span></button>
       <button type="button" role="tab" id="subtab-gzh" aria-controls="subpanel-gzh" aria-selected="false" tabindex="-1">公众号<span class="n">4 篇</span></button>
       <button type="button" role="tab" id="subtab-sph" aria-controls="subpanel-sph" aria-selected="false" tabindex="-1">视频号<span class="n">1 篇</span></button>
       <button type="button" role="tab" id="subtab-bili" aria-controls="subpanel-bili" aria-selected="false" tabindex="-1">B站<span class="n">1 篇</span></button>
     </nav>
+    </div>
 
     <div class="subpanel" id="subpanel-xhs" role="tabpanel" aria-labelledby="subtab-xhs">
     <div class="pub-group">
-      <h3 class="pub-head">小红书<span class="pub-count">4 篇</span></h3>
+      <div class="pub-group-head"><h3 class="pub-head">小红书<span class="pub-count">4 篇</span></h3><button type="button" class="pub-filter-btn" aria-pressed="false">仅看公开</button></div>
       <ul class="pub-list">
-        <li><span class="p-title"><a href="https://xhslink.cn/o/fedDsjOwAl" target="_blank" rel="noopener">46岁，我决定用10年攒出一份“退休工资”</a></span><time datetime="2026-10-17">2026-10-17</time></li>
-        <li><span class="p-title">攒股收息：持仓与波段，我坚守的几条核心铁律</span><time datetime="2026-10-29">2026-10-29</time></li>
-        <li><span class="p-title">攒股收息｜我的分档建仓规则</span><time datetime="2026-11-02">2026-11-02</time></li>
-        <li><span class="p-title">攒股收息：我的兑现规则</span><time datetime="2026-11-03">2026-11-03</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://xhslink.cn/o/fedDsjOwAl" target="_blank" rel="noopener">46岁，我决定用10年攒出一份“退休工资”</a><span class="pub-badge">公开</span></span><time datetime="2026-10-17">2026-10-17</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://xhslink.cn/o/17YK6OmC9iw" target="_blank" rel="noopener">攒股收息：持仓与波段，我坚守的几条核心铁律</a><span class="pub-badge">公开</span></span><time datetime="2026-10-29">2026-10-29</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://xhslink.cn/o/4wgbGah4tDa" target="_blank" rel="noopener">攒股收息｜我的分档建仓规则</a><span class="pub-badge">公开</span></span><time datetime="2026-11-02">2026-11-02</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://xhslink.cn/o/8v5rJoyMwln" target="_blank" rel="noopener">攒股收息：我的兑现规则</a><span class="pub-badge">公开</span></span><time datetime="2026-11-03">2026-11-03</time></li>
       </ul>
     </div>
     </div>
 
     <div class="subpanel" id="subpanel-gzh" role="tabpanel" aria-labelledby="subtab-gzh" hidden>
     <div class="pub-group">
-      <h3 class="pub-head">公众号<span class="pub-count">4 篇</span></h3>
+      <div class="pub-group-head"><h3 class="pub-head">公众号<span class="pub-count">4 篇</span></h3><button type="button" class="pub-filter-btn" aria-pressed="false">仅看公开</button></div>
       <ul class="pub-list">
-        <li><span class="p-title"><a href="https://mp.weixin.qq.com/s/ccf6V4ORLuGARvMGZe8H4A" target="_blank" rel="noopener">46岁，我决定用10年攒出一份“退休工资”</a></span><time datetime="2026-10-31">2026-10-31</time></li>
-        <li><span class="p-title"><a href="https://mp.weixin.qq.com/s/YJ0y3QBGLzsSwnM18rvzcQ" target="_blank" rel="noopener">攒股收息：我的完整A股复利操作框架</a></span><time datetime="2026-11-03">2026-11-03</time></li>
-        <li><span class="p-title"><a href="https://mp.weixin.qq.com/s/kEN3ZyJAICmTmOwavba4pg" target="_blank" rel="noopener">攒股收息｜为什么是我这条路：攒股、打新与市场位置</a></span><time datetime="2026-11-10">2026-11-10</time></li>
-        <li><span class="p-title"><a href="https://mp.weixin.qq.com/s/1xA7LEYE9QDOFOqjJpuc4g" target="_blank" rel="noopener">美股ETF定投｜四只持仓是怎么配出来的</a></span><time datetime="2026-11-15">2026-11-15</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://mp.weixin.qq.com/s/ccf6V4ORLuGARvMGZe8H4A" target="_blank" rel="noopener">46岁，我决定用10年攒出一份“退休工资”</a><span class="pub-badge">公开</span></span><time datetime="2026-10-31">2026-10-31</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://mp.weixin.qq.com/s/YJ0y3QBGLzsSwnM18rvzcQ" target="_blank" rel="noopener">攒股收息：我的完整A股复利操作框架</a><span class="pub-badge">公开</span></span><time datetime="2026-11-03">2026-11-03</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://mp.weixin.qq.com/s/kEN3ZyJAICmTmOwavba4pg" target="_blank" rel="noopener">攒股收息｜为什么是我这条路：攒股、打新与市场位置</a><span class="pub-badge">公开</span></span><time datetime="2026-11-10">2026-11-10</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://mp.weixin.qq.com/s/1xA7LEYE9QDOFOqjJpuc4g" target="_blank" rel="noopener">美股ETF定投｜四只持仓是怎么配出来的</a><span class="pub-badge">公开</span></span><time datetime="2026-11-15">2026-11-15</time></li>
       </ul>
     </div>
     </div>
 
     <div class="subpanel" id="subpanel-sph" role="tabpanel" aria-labelledby="subtab-sph" hidden>
     <div class="pub-group">
-      <h3 class="pub-head">视频号<span class="pub-count">1 篇</span></h3>
+      <div class="pub-group-head"><h3 class="pub-head">视频号<span class="pub-count">1 篇</span></h3><button type="button" class="pub-filter-btn" aria-pressed="false">仅看公开</button></div>
       <ul class="pub-list">
-        <li><span class="p-title"><a href="https://weixin.qq.com/sph/AV0CPmQ2Gs" target="_blank" rel="noopener">46岁，我为什么不靠炒股养家</a></span><time datetime="2026-11-14">2026-11-14</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://weixin.qq.com/sph/AV0CPmQ2Gs" target="_blank" rel="noopener">46岁，我为什么不靠炒股养家</a><span class="pub-badge">公开</span></span><time datetime="2026-11-14">2026-11-14</time></li>
       </ul>
     </div>
     </div>
 
     <div class="subpanel" id="subpanel-bili" role="tabpanel" aria-labelledby="subtab-bili" hidden>
     <div class="pub-group">
-      <h3 class="pub-head">B站<span class="pub-count">1 篇</span></h3>
+      <div class="pub-group-head"><h3 class="pub-head">B站<span class="pub-count">1 篇</span></h3><button type="button" class="pub-filter-btn" aria-pressed="false">仅看公开</button></div>
       <ul class="pub-list">
-        <li><span class="p-title"><a href="https://b23.tv/LWbAyoh" target="_blank" rel="noopener">46岁，我为什么不靠炒股养家</a></span><time datetime="2026-11-16">2026-11-16</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://b23.tv/LWbAyoh" target="_blank" rel="noopener">46岁，我为什么不靠炒股养家</a><span class="pub-badge">公开</span></span><time datetime="2026-11-16">2026-11-16</time></li>
       </ul>
     </div>
     </div>
@@ -953,6 +1031,42 @@
     });
   });
   activateSub('xhs', false, false);
+
+  /* 公开筛选：仅看公开 / 全部 */
+  var filterBtns = Array.prototype.slice.call(document.querySelectorAll('.pub-filter-btn'));
+  var publicOnly = false;
+  var pubItems = Array.prototype.slice.call(document.querySelectorAll('#panel-published .pub-list li'));
+  var pubCounts = Array.prototype.slice.call(document.querySelectorAll('#panel-published .pub-count'));
+  pubCounts.forEach(function(c){ c.setAttribute('data-orig', c.textContent); });
+  var asofEl = document.querySelector('#panel-published .sec-head .asof');
+  var asofOrig = asofEl ? asofEl.textContent : '';
+  var totalPublic = pubItems.filter(function(li){ return li.classList.contains('is-public'); }).length;
+  function applyPubFilter(){
+    pubItems.forEach(function(li){
+      var hide = publicOnly && !li.classList.contains('is-public');
+      li.classList.toggle('pub-hidden', hide);
+    });
+    pubCounts.forEach(function(c){
+      if(publicOnly){
+        var panel = c.closest('.subpanel');
+        var n = panel ? panel.querySelectorAll('.pub-list li.is-public').length : 0;
+        c.textContent = n + ' 篇公开';
+      } else {
+        c.textContent = c.getAttribute('data-orig');
+      }
+    });
+    if(asofEl) asofEl.textContent = publicOnly ? ('公开 ' + totalPublic + ' 篇 · 共 43 篇') : asofOrig;
+    filterBtns.forEach(function(btn){
+      btn.setAttribute('aria-pressed', publicOnly ? 'true' : 'false');
+      btn.textContent = publicOnly ? '全部' : '仅看公开';
+    });
+  }
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      publicOnly = !publicOnly;
+      applyPubFilter();
+    });
+  });
 })();
 </script>
 </body>
