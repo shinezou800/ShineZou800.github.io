@@ -458,9 +458,12 @@
   @media (max-width:480px){
     .pf-table thead th:nth-child(3),
     .pf-table tbody td:nth-child(3){display:none}
+    .cn-table thead th:nth-child(6),
+    .cn-table tbody td:nth-child(6){display:none}
   }
 
   .pf-table .w-pct{font-weight:700; color:var(--accent-ink)}
+  .pf-table .yield{font-weight:700; color:var(--accent-ink)}
   .pf-table .wbar{
     display:block;
     width:52px;
@@ -781,13 +784,13 @@
       <button type="button" class="way" data-goto="us">
         <span class="k">模拟盘 · 美股</span>
         <h2>美股 ETF 定投</h2>
-        <p>总资产 $12,249.70 · 持仓 4 只 · 数据截至 2026-11-16</p>
+        <p>总资产 $12,101.95 · 持仓 4 只 · 数据截至 2026-11-16</p>
         <span class="go">去看看 →</span>
       </button>
       <button type="button" class="way" data-goto="published">
         <span class="k">已发表</span>
-        <h2>精选 10 篇</h2>
-        <p>小红书 4 篇 · 公众号 4 篇 · 视频号 1 篇 · B站 1 篇</p>
+        <h2>精选 11 篇</h2>
+        <p>小红书 5 篇 · 公众号 4 篇 · 视频号 1 篇 · B站 1 篇</p>
         <span class="go">去看看 →</span>
       </button>
     </div>
@@ -795,7 +798,7 @@
 
   <div class="panel" id="panel-cn" role="tabpanel" aria-labelledby="tab-cn">
     <div class="pf-topbar">
-      <span>数据截至 <strong>2026-11-16 收盘</strong></span>
+      <span>数据截至 <strong>2026-11-17 收盘</strong></span>
       <span class="r">模拟盘 · 每日收盘后更新</span>
     </div>
 
@@ -803,47 +806,47 @@
       <div class="pf-head">
         <h3>A股主账户</h3>
         <span class="pf-tag">攒股收息仓 · cn</span>
-        <div class="sub">收息底仓，长期持有吃分红 · <span style="white-space:nowrap">当日盈亏 <b class="up">+7,750.00</b></span></div>
+        <div class="sub">收息底仓，长期持有吃分红 · <span style="white-space:nowrap">当日盈亏 <b class="up">+2,870.00</b></span></div>
       </div>
 
       <div class="pf-stats">
-        <div class="pf-stat"><span class="k">持仓市值</span><span class="v">¥476,380</span></div>
+        <div class="pf-stat"><span class="k">持仓市值</span><span class="v">¥479,250</span></div>
         <div class="pf-stat"><span class="k">现金</span><span class="v">¥580,720</span></div>
-        <div class="pf-stat"><span class="k">净资产</span><span class="v">¥1,057,100</span></div>
-        <div class="pf-stat"><span class="k">累计收益</span><span class="v up">+57,100 <small>+5.71%</small></span></div>
+        <div class="pf-stat"><span class="k">净资产</span><span class="v">¥1,059,970</span></div>
+        <div class="pf-stat"><span class="k">累计收益</span><span class="v up">+59,970 <small>+6.00%</small></span></div>
       </div>
 
-      <table class="pf-table">
-        <thead><tr><th>股票</th><th>持仓</th><th>成本</th><th>现价</th><th>市值</th><th>占持仓</th><th>浮盈</th></tr></thead>
+      <table class="pf-table cn-table">
+        <thead><tr><th>股票</th><th>持仓</th><th>成本</th><th>现价</th><th>股息率</th><th>市值</th><th>占持仓</th><th>浮盈</th></tr></thead>
         <tbody>
           <tr>
             <td><span class="sym">中国平安<span class="code">601318</span></span></td>
-            <td>5,000</td><td>51.579</td><td>54.65</td><td>273,250</td><td><span class="w-pct">57.4%</span><span class="wbar"><i style="width:57.4%"></i></span></td><td class="pnl up">+15,354.29</td>
+            <td>5,000</td><td>51.579</td><td>54.65</td><td class="yield">4.94%</td><td>273,250</td><td><span class="w-pct">57.0%</span><span class="wbar"><i style="width:57.0%"></i></span></td><td class="pnl up">+15,354.29</td>
           </tr>
           <tr>
             <td><span class="sym">兴业银行<span class="code">601166</span></span></td>
-            <td>3,000</td><td>17.84</td><td>20.11</td><td>60,330</td><td><span class="w-pct">12.7%</span><span class="wbar"><i style="width:12.7%"></i></span></td><td class="pnl up">+6,810.00</td>
+            <td>3,000</td><td>17.84</td><td>20.17</td><td class="yield">5.29%</td><td>60,510</td><td><span class="w-pct">12.6%</span><span class="wbar"><i style="width:12.6%"></i></span></td><td class="pnl up">+6,990.00</td>
           </tr>
           <tr>
             <td><span class="sym">云南白药<span class="code">000538</span></span></td>
-            <td>1,000</td><td>49.645</td><td>55.92</td><td>55,920</td><td><span class="w-pct">11.7%</span><span class="wbar"><i style="width:11.7%"></i></span></td><td class="pnl up">+6,275.00</td>
+            <td>1,000</td><td>49.645</td><td>56.29</td><td class="yield">4.62%</td><td>56,290</td><td><span class="w-pct">11.7%</span><span class="wbar"><i style="width:11.7%"></i></span></td><td class="pnl up">+6,645.00</td>
           </tr>
           <tr>
             <td><span class="sym">海尔智家<span class="code">600690</span></span></td>
-            <td>4,000</td><td>20.525</td><td>21.72</td><td>86,880</td><td><span class="w-pct">18.2%</span><span class="wbar"><i style="width:18.2%"></i></span></td><td class="pnl up">+4,780.00</td>
+            <td>4,000</td><td>20.525</td><td>22.30</td><td class="yield">5.20%</td><td>89,200</td><td><span class="w-pct">18.6%</span><span class="wbar"><i style="width:18.6%"></i></span></td><td class="pnl up">+7,100.00</td>
           </tr>
         </tbody>
       </table>
 
-      <div class="pf-note">预期年分红 <b>¥23,940</b> · 组合股息率 <b>5.03%</b> · 现金占净资产 54.9%</div>
+      <div class="pf-note">预期年分红 <b>¥23,940</b> · 组合股息率 <b>5.00%</b> · 现金占净资产 54.8%<br>股息率口径：2025 年度每股分红 ÷ 2026-11-17 收盘价。</div>
     </section>
 
-    <p class="pf-foot">数据来源：模拟盘接口（主账户 cn），现价为 2026-11-16 收盘。「占持仓」为该股市值占持仓市值的比例，四只合计 100%。模拟盘记录，不涉真实资金，不构成投资建议。</p>
+    <p class="pf-foot">数据来源：模拟盘接口（主账户 cn），现价为 2026-11-17 收盘。「占持仓」为该股市值占持仓市值的比例，四只合计 100%。模拟盘记录，不涉真实资金，不构成投资建议。</p>
   </div>
 
   <div class="panel" id="panel-us" role="tabpanel" aria-labelledby="tab-us">
     <div class="pf-topbar">
-      <span>数据截至 <strong>2026-11-16 收盘</strong></span>
+      <span>数据截至 <strong>2026-11-17 收盘</strong></span>
       <span class="r">模拟盘 · 每日收盘后更新</span>
     </div>
 
@@ -851,14 +854,14 @@
       <div class="pf-head">
         <h3>美股 ETF 定投</h3>
         <span class="pf-tag">月定投 · 目标 $100,000</span>
-        <div class="sub">宽基＋红利长期定投 · 目标进度 <b>12.2%</b> · 下期定投 <b>12-15</b>（SPYM 8 / QQQM 1 / SGOV 5 / SCHD 15）· 本周 <b>+1.47（+0.01%）</b></div>
+        <div class="sub">宽基＋红利长期定投 · 目标进度 <b>12.1%</b> · 下期定投 <b>12-15</b>（SPYM 8 / QQQM 1 / SGOV 5 / SCHD 15）· 本周 <b>-146.37（-1.20%）</b></div>
       </div>
 
       <div class="pf-stats">
-        <div class="pf-stat"><span class="k">持仓市值</span><span class="v">$12,208.38</span></div>
+        <div class="pf-stat"><span class="k">持仓市值</span><span class="v">$12,060.54</span></div>
         <div class="pf-stat"><span class="k">累计分红</span><span class="v">$40.66</span></div>
-        <div class="pf-stat"><span class="k">总资产</span><span class="v">$12,249.70</span></div>
-        <div class="pf-stat"><span class="k">整体收益</span><span class="v up">+184.33 <small>+1.53%</small></span></div>
+        <div class="pf-stat"><span class="k">总资产</span><span class="v">$12,101.86</span></div>
+        <div class="pf-stat"><span class="k">整体收益</span><span class="v up">+36.49 <small>+0.30%</small></span></div>
       </div>
 
       <table class="pf-table">
@@ -866,37 +869,37 @@
         <tbody>
           <tr>
             <td><span class="sym">SCHD<span class="code">红利 ETF</span></span></td>
-            <td>90</td><td>33.602</td><td>36.12</td><td>3,250.80</td><td><span class="w-pct">26.6%</span><span class="wbar"><i style="width:26.6%"></i></span></td><td class="pnl up">+226.57</td>
+            <td>90</td><td>33.602</td><td>35.86</td><td>3,227.40</td><td><span class="w-pct">26.8%</span><span class="wbar"><i style="width:26.8%"></i></span></td><td class="pnl up">+203.18</td>
           </tr>
           <tr>
             <td><span class="sym">SPYM<span class="code">标普 500</span></span></td>
-            <td>48</td><td>89.038</td><td>88.77</td><td>4,260.96</td><td><span class="w-pct">34.9%</span><span class="wbar"><i style="width:34.9%"></i></span></td><td class="pnl down">-12.88</td>
+            <td>48</td><td>89.038</td><td>87.10</td><td>4,180.80</td><td><span class="w-pct">34.7%</span><span class="wbar"><i style="width:34.7%"></i></span></td><td class="pnl down">-93.04</td>
           </tr>
           <tr>
             <td><span class="sym">SGOV<span class="code">短期国债</span></span></td>
-            <td>30</td><td>100.233</td><td>100.56</td><td>3,016.80</td><td><span class="w-pct">24.7%</span><span class="wbar"><i style="width:24.7%"></i></span></td><td class="pnl up">+9.80</td>
+            <td>30</td><td>100.233</td><td>100.58</td><td>3,017.40</td><td><span class="w-pct">25.0%</span><span class="wbar"><i style="width:25.0%"></i></span></td><td class="pnl up">+10.40</td>
           </tr>
           <tr>
             <td><span class="sym">QQQM<span class="code">纳指 100</span></span></td>
-            <td>6</td><td>293.275</td><td>279.97</td><td>1,679.82</td><td><span class="w-pct">13.8%</span><span class="wbar"><i style="width:13.8%"></i></span></td><td class="pnl down">-79.83</td>
+            <td>6</td><td>293.275</td><td>272.49</td><td>1,634.94</td><td><span class="w-pct">13.5%</span><span class="wbar"><i style="width:13.5%"></i></span></td><td class="pnl down">-124.71</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <p class="pf-foot">数据来源：模拟盘接口（美股 ETF 定投 us），现价为 2026-11-16 收盘。「占持仓」为该 ETF 市值占持仓市值的比例，四只合计 100%；目标配比 SPYM 35% / SCHD 25% / SGOV 25% / QQQM 15%。模拟盘记录，不涉真实资金，不构成投资建议。</p>
+    <p class="pf-foot">数据来源：模拟盘接口（美股 ETF 定投 us），现价为 2026-11-17 收盘。「占持仓」为该 ETF 市值占持仓市值的比例，四只合计 100%；目标配比 SPYM 35% / SCHD 25% / SGOV 25% / QQQM 15%。模拟盘记录，不涉真实资金，不构成投资建议。</p>
   </div>
 
   <div class="panel" id="panel-published" role="tabpanel" aria-labelledby="tab-published">
   <section aria-label="已发表">
     <div class="sec-head">
       <h2>已发表</h2>
-      <span class="asof">精选 10 篇</span>
+      <span class="asof">精选 11 篇</span>
     </div>
 
     <div class="pub-toolbar">
     <nav class="subtabs" role="tablist" aria-label="已发表分页">
-      <button type="button" role="tab" id="subtab-xhs" aria-controls="subpanel-xhs" aria-selected="true">小红书<span class="n">4 篇</span></button>
+      <button type="button" role="tab" id="subtab-xhs" aria-controls="subpanel-xhs" aria-selected="true">小红书<span class="n">5 篇</span></button>
       <button type="button" role="tab" id="subtab-gzh" aria-controls="subpanel-gzh" aria-selected="false" tabindex="-1">公众号<span class="n">4 篇</span></button>
       <button type="button" role="tab" id="subtab-sph" aria-controls="subpanel-sph" aria-selected="false" tabindex="-1">视频号<span class="n">1 篇</span></button>
       <button type="button" role="tab" id="subtab-bili" aria-controls="subpanel-bili" aria-selected="false" tabindex="-1">B站<span class="n">1 篇</span></button>
@@ -905,12 +908,13 @@
 
     <div class="subpanel" id="subpanel-xhs" role="tabpanel" aria-labelledby="subtab-xhs">
     <div class="pub-group">
-      <div class="pub-group-head"><h3 class="pub-head">小红书<span class="pub-count">4 篇</span></h3><button type="button" class="pub-filter-btn" aria-pressed="false">仅看公开</button></div>
+      <div class="pub-group-head"><h3 class="pub-head">小红书<span class="pub-count">5 篇</span></h3><button type="button" class="pub-filter-btn" aria-pressed="false">仅看公开</button></div>
       <ul class="pub-list">
         <li class="is-public"><span class="p-title"><a href="https://xhslink.cn/o/fedDsjOwAl" target="_blank" rel="noopener">46岁，我决定用10年攒出一份“退休工资”</a><span class="pub-badge">公开</span></span><time datetime="2026-10-17">2026-10-17</time></li>
         <li class="is-public"><span class="p-title"><a href="https://xhslink.cn/o/17YK6OmC9iw" target="_blank" rel="noopener">攒股收息：持仓与波段，我坚守的几条核心铁律</a><span class="pub-badge">公开</span></span><time datetime="2026-10-29">2026-10-29</time></li>
         <li class="is-public"><span class="p-title"><a href="https://xhslink.cn/o/4wgbGah4tDa" target="_blank" rel="noopener">攒股收息｜我的分档建仓规则</a><span class="pub-badge">公开</span></span><time datetime="2026-11-02">2026-11-02</time></li>
         <li class="is-public"><span class="p-title"><a href="https://xhslink.cn/o/8v5rJoyMwln" target="_blank" rel="noopener">攒股收息：我的兑现规则</a><span class="pub-badge">公开</span></span><time datetime="2026-11-03">2026-11-03</time></li>
+        <li class="is-public"><span class="p-title"><a href="https://xhslink.cn/o/A2JwTul3eLM" target="_blank" rel="noopener">为什么A股多数普通人，适合攒股收息</a><span class="pub-badge">公开</span></span><time datetime="2026-11-17">2026-11-17</time></li>
       </ul>
     </div>
     </div>
@@ -1055,7 +1059,7 @@
         c.textContent = c.getAttribute('data-orig');
       }
     });
-    if(asofEl) asofEl.textContent = publicOnly ? ('公开 ' + totalPublic + ' 篇 · 共 43 篇') : asofOrig;
+    if(asofEl) asofEl.textContent = publicOnly ? ('公开 ' + totalPublic + ' 篇 · 共 44 篇') : asofOrig;
     filterBtns.forEach(function(btn){
       btn.setAttribute('aria-pressed', publicOnly ? 'true' : 'false');
       btn.textContent = publicOnly ? '全部' : '仅看公开';
